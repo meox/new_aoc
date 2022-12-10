@@ -471,6 +471,15 @@ defmodule Mix.Tasks.NewAoc do
       |> File.read!()
       |> String.split("\\n")
     end
+
+    defp as_numbers(xs) when is_list(xs) do
+      Enum.map(xs, &as_number/1)
+    end
+
+    defp as_number(s) when is_string(s) do
+      {n, ""} = Integer.parse(s)
+      n
+    end
   end
   """)
 
