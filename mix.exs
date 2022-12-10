@@ -8,6 +8,7 @@ defmodule NewAoc.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: description(),
       package: package()
     ]
   end
@@ -27,6 +28,10 @@ defmodule NewAoc.MixProject do
     ]
   end
 
+  defp description() do
+    "Simple task to generate an application for the Advent of Code"
+  end
+
   defp package() do
     [
       # This option is only needed when you don't want to use the OTP application name
@@ -34,7 +39,7 @@ defmodule NewAoc.MixProject do
       # These are the default files included in the package
       files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
                 license* CHANGELOG* changelog* src),
-      licenses: ["Apache-2.0"],
+      licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/meox/nex_aoc"}
     ]
   end
