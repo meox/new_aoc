@@ -469,7 +469,7 @@ defmodule Mix.Tasks.NewAoc do
     def input(filename) do
       filename
       |> File.read!()
-      |> String.split("\n")
+      |> String.split("\\n")
     end
   end
   """)
