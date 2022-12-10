@@ -450,13 +450,14 @@ defmodule Mix.Tasks.NewAoc do
 
     def part1(:prod), do: part1("input.txt")
     def part1(:example), do: part1("example.txt")
-    def part2(:prod), do: part2("input.txt")
-    def part2(:example), do: part2("example.txt")
 
     def part1(filename) do
       filename
       |> input()
     end
+
+    def part2(:prod), do: part2("input.txt")
+    def part2(:example), do: part2("example.txt")
 
     def part2(filename) do
       filename
@@ -476,7 +477,7 @@ defmodule Mix.Tasks.NewAoc do
       Enum.map(xs, &as_number/1)
     end
 
-    defp as_number(s) when is_string(s) do
+    defp as_number(s) do
       {n, ""} = Integer.parse(s)
       n
     end
