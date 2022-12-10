@@ -40,7 +40,7 @@ defmodule NewAoc.MixProject do
       # These are the default files included in the package
       files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/meox/nex_aoc"}
+      links: %{"GitHub" => "https://github.com/meox/new_aoc"}
     ]
   end
 end
